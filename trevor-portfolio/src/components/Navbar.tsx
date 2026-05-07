@@ -46,7 +46,7 @@ export default function Navbar() {
         {navItems.map((item) => (
           <a
             key={item.id}
-            href={`${item.id}`}
+            href={`#${item.id}`}
             className={activeSection === item.id ? "active" : ""}
           >
             {item.label}
