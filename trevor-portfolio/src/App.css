@@ -1,8 +1,45 @@
-section {
+.app {
   min-height: 100vh;
-  padding: 4rem 2rem;
 }
 
-html {
-  scroll-behavior: smooth;
+.main-content {
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background-color: #4a4a4a;
+}
+
+.navbar-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: orange;
+}
+
+.navbar a.active {
+  color: orange;
+  font-weight: 700;
 }
