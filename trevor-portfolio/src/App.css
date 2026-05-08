@@ -64,4 +64,16 @@
   text-align: center;
   padding: 2rem;
 }
+
+.hero-buttons {
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
 /*#endregion */
