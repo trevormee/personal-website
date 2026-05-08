@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { id: "hero", label: "Trevor Mee" },
+  { id: "hero", label: "Home" },
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
