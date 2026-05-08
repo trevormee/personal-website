@@ -7,7 +7,7 @@ import heroBackgroundImage from "../assets/blackCircuit.avif";
 // import heroBackgroundImage from "../assets/hero-background.jpg";
 import githubLogo from "../assets/hero-images/github-logo.png";
 import linkedinLogo from "../assets/hero-images/linkedin-logo.png";
-import emailLogo from "../assets/hero-images/email-logo.webp";
+import EmailIcon from "@mui/icons-material/Email";
 
 export default function Hero() {
   return (
@@ -44,9 +44,8 @@ export default function Hero() {
           <IconButton
             href="mailto:trevormee11@gmail.com"
             aria-label="Email Trevor"
-            className="hero-icon-button"
           >
-            <img src={emailLogo} alt="Email" className="button-logo" />
+            <EmailIcon sx={{ color: "white", fontSize: 40 }} />
           </IconButton>
         </Stack>
       </div>
