@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import heroBackgroundImage from "../assets/blackCircuit.avif";
@@ -9,7 +9,49 @@ import githubLogo from "../assets/hero-images/github-logo.png";
 import linkedinLogo from "../assets/hero-images/linkedin-logo.png";
 import EmailIcon from "@mui/icons-material/Email";
 
+const nameText = "Trevor Mee";
+const titleText = "Software Engineer | M.S. Analytics Candidate";
+
 export default function Hero() {
+  const [displayedName, setDisplayedName] = useState("");
+  const [displayedTitle, setDisplayedTitle] = useState("");
+  const [isNameDone, setIsNameDone] = useState(false);
+  const [isTitleDone, setIsTitleDone] = useState(false);
+
+  useEffect(() => {
+    let currIndex = 0;
+
+    const nameInterval = window.setInterval(() => {
+      setDisplayedName(nameText.slice(0, currIndex + 1));
+      currIndex++;
+
+      if (currIndex === nameText.length) {
+        window.clearInterval(nameInterval);
+        setIsNameDone(true);
+      }
+    }, 90);
+
+    return () => window.clearInterval(nameInterval);
+  }, []);
+
+  useEffect(() => {
+    if (!isNameDone) return;
+
+    let currIndex = 0;
+
+    const titleInterval = window.setInterval(() => {
+      setDisplayedTitle(titleText.slice(0, currIndex + 1));
+      currIndex++;
+
+      if (currIndex === titleText.length) {
+        window.clearInterval(titleInterval);
+        setIsTitleDone(true);
+      }
+    }, 45);
+
+    return () => window.clearInterval(titleInterval);
+  }, [isNameDone]);
+
   return (
     <section
       id="hero"
@@ -17,8 +59,18 @@ export default function Hero() {
       style={{ backgroundImage: `url(${heroBackgroundImage})` }}
     >
       <div className="hero-content">
-        <h1>Trevor Mee</h1>
-        <h2>Software Engineer | M.S. Analytics Candidate</h2>
+        <h1 className="hero-title">
+          {displayedName}
+          {!isNameDone && <span className="typing-cursor">|</span>}
+        </h1>
+
+        <h2 className="hero-subtitle">
+          {displayedTitle}
+          {isNameDone && !isTitleDone && (
+            <span className="typing-cursor">|</span>
+          )}
+          {isTitleDone && <span className="typing-cursor"></span>}
+        </h2>
 
         <Stack direction="row" spacing={2} className="hero-buttons">
           <IconButton

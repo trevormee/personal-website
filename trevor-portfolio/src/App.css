@@ -65,8 +65,29 @@
   padding: 2rem;
 }
 
+.hero-title,
+.hero-subtitle {
+  font-family:
+    "Cascadia Code", "Fira Code", "Consolas", "Courier New", monospace;
+  color: white;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: orange;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 .hero-buttons {
-  margin-top: 2rem;
+  margin-top: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
