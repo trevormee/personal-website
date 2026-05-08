@@ -72,37 +72,39 @@ export default function Hero() {
           {isTitleDone && <span className="typing-cursor"></span>}
         </h2>
 
-        <Stack direction="row" spacing={2} className="hero-buttons">
-          <IconButton
-            href="https://github.com/trevormee"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profile"
-            className="hero-icon-button"
-          >
-            <img src={githubLogo} alt="GitHub" className="button-logo" />
-          </IconButton>
+        {isTitleDone && (
+          <Stack direction="row" spacing={2} className="hero-buttons">
+            <IconButton
+              href="https://github.com/trevormee"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              className="hero-icon-button"
+            >
+              <img src={githubLogo} alt="GitHub" className="button-logo" />
+            </IconButton>
 
-          <IconButton
-            href="https://www.linkedin.com/in/trevormee/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
-            className="hero-icon-button"
-          >
-            <img src={linkedinLogo} alt="LinkedIn" className="button-logo" />
-          </IconButton>
+            <IconButton
+              href="https://www.linkedin.com/in/trevormee/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              className="hero-icon-button"
+            >
+              <img src={linkedinLogo} alt="LinkedIn" className="button-logo" />
+            </IconButton>
 
-          <IconButton
-            href="mailto:trevormee11@gmail.com"
-            aria-label="Email Trevor"
-          >
-            <EmailIcon
-              sx={{ color: "white", fontSize: 40 }}
-              className="button-logo"
-            />
-          </IconButton>
-        </Stack>
+            <IconButton
+              href="mailto:trevormee11@gmail.com"
+              aria-label="Email Trevor"
+            >
+              <EmailIcon
+                sx={{ color: "white", fontSize: 40 }}
+                className="button-logo"
+              />
+            </IconButton>
+          </Stack>
+        )}
       </div>
     </section>
   );
