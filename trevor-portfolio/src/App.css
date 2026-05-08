@@ -76,4 +76,11 @@
   height: 40px;
   object-fit: contain;
 }
+
+.button-logo:hover {
+  background-color: orange;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
 /*#endregion */

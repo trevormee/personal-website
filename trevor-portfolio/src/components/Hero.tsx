@@ -45,7 +45,10 @@ export default function Hero() {
             href="mailto:trevormee11@gmail.com"
             aria-label="Email Trevor"
           >
-            <EmailIcon sx={{ color: "white", fontSize: 40 }} />
+            <EmailIcon
+              sx={{ color: "white", fontSize: 40 }}
+              className="button-logo"
+            />
           </IconButton>
         </Stack>
       </div>
