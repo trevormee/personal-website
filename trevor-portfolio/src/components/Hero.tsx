@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import heroBackgroundImage from "../assets/blackCircuit.avif";
 // import heroBackgroundImage from "../assets/futureRing.webp";
 // import heroBackgroundImage from "../assets/futureTunnel.avif";
 // import heroBackgroundImage from "../assets/hero-background.jpg";
 import githubLogo from "../assets/hero-images/github-logo.png";
-import linkedinLogo from "../assets/hero-images/linkedin-logo.jpg";
+import linkedinLogo from "../assets/hero-images/linkedin-logo.png";
 import emailLogo from "../assets/hero-images/email-logo.webp";
 
 export default function Hero() {
@@ -21,23 +21,33 @@ export default function Hero() {
         <h2>Software Engineer | M.S. Analytics Candidate</h2>
 
         <Stack direction="row" spacing={2} className="hero-buttons">
-          <Button
-            variant="text"
+          <IconButton
             href="https://github.com/trevormee"
             target="_blank"
             rel="noopener noreferrer"
-            startIcon={<img src={githubLogo} alt="" className="button-logo" />}
-          ></Button>
+            aria-label="GitHub profile"
+            className="hero-icon-button"
+          >
+            <img src={githubLogo} alt="GitHub" className="button-logo" />
+          </IconButton>
 
-          <Button
-            variant="text"
+          <IconButton
             href="https://www.linkedin.com/in/trevormee/"
             target="_blank"
             rel="noopener noreferrer"
-            startIcon={
-              <img src={linkedinLogo} alt="" className="button-logo" />
-            }
-          ></Button>
+            aria-label="LinkedIn profile"
+            className="hero-icon-button"
+          >
+            <img src={linkedinLogo} alt="LinkedIn" className="button-logo" />
+          </IconButton>
+
+          <IconButton
+            href="mailto:trevormee11@gmail.com"
+            aria-label="Email Trevor"
+            className="hero-icon-button"
+          >
+            <img src={emailLogo} alt="Email" className="button-logo" />
+          </IconButton>
         </Stack>
       </div>
     </section>
