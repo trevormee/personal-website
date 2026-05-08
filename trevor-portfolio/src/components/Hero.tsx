@@ -1,5 +1,8 @@
 import React from "react";
-import heroBackgroundImage from "../assets/hero-background-1.jpg";
+import heroBackgroundImage from "../assets/blackCircuit.avif";
+// import heroBackgroundImage from "../assets/futureRing.webp";
+// import heroBackgroundImage from "../assets/futureTunnel.avif";
+// import heroBackgroundImage from "../assets/hero-background.jpg";
 
 export default function Hero() {
   return (
