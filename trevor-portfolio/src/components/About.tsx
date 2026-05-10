@@ -1,6 +1,16 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Button, Container, Grid, Typography } from "@mui/material";
+import DownloadIcon from "@mui/icons-material/Download";
 
 export default function About() {
+  const handleResumeDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume2026.pdf";
+    link.download = "Trevor-Mee-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about">
       <h2 style={{ textAlign: "center", marginTop: "2rem" }}>About</h2>
@@ -27,6 +37,13 @@ export default function About() {
               I am especially passionate about frontend development, data
               science, and the rapid advancement of AI and Machine Learning.
             </p>
+            <Button
+              startIcon={<DownloadIcon />}
+              onClick={handleResumeDownload}
+              variant="outlined"
+            >
+              Download Resume
+            </Button>
           </Grid>
           <Grid size={{ xs: 12, md: 4 }}>Skills snapshot</Grid>
         </Grid>
