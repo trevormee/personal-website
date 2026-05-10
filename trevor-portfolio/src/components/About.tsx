@@ -45,7 +45,25 @@ export default function About() {
               Download Resume
             </Button>
           </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>Skills snapshot</Grid>
+          <Grid size={{ xs: 12, md: 4 }}>
+            <Typography>Core Skills</Typography>
+            <p>
+              <strong>Languages: </strong>Typescript | C++ | R | Python | Java |
+              SQL
+            </p>
+            <p>
+              <strong>Frameworks & Libraries: </strong> React | Node.js | MUI |
+              Jest
+            </p>
+            <p>
+              <strong>Tools & Platforms: </strong> Git | Linux | Docker |
+              Kubernetes
+            </p>
+            <p>
+              <strong>Analytics: </strong> Optimization | Classification | ML |
+              Data Modeling
+            </p>
+          </Grid>
         </Grid>
       </Container>
     </section>
